@@ -3,14 +3,12 @@ import axios from "axios";
 
 export const fetchData = createAsyncThunk("getData", 
   async()=> {
-    const res =await axios.get("https://dummyjson.com/products/");
-    return res;
+    const response =await axios.get("https://dummyjson.com/products/");
+    return response;
 })
 
 const initialState = {
-  count: 0, 
   data : [],
-  loading: false
 };
 
 const dataSlice = createSlice({

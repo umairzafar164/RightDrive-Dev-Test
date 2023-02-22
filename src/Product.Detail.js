@@ -27,7 +27,7 @@ function ProductDetail() {
           <p>Rating: {product.rating}</p>
           <p>Stock: {product.stock}</p>
           {product.images?.map((item) => (
-            <img src={item} alt={item.title} />
+            <img key={item} src={item} alt={item.title} />
           ))}
         </>
       )}

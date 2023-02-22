@@ -1,14 +1,13 @@
 import "./App.css";
 import { fetchData } from "./dataSlice";
 import { useDispatch, useSelector } from "react-redux";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import {
   Grid,
   Card,
   CardMedia,
   CardContent,
   Typography,
-  Button,
   CardActions,
 } from "@mui/material";
 import { Link } from "react-router-dom";
