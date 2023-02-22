@@ -10,7 +10,7 @@ function ProductDetail() {
   const response = useSelector((state) => state.data.products);
 
   useEffect(() => {
-    let filteredProduct = response.find((p) => p.id == id);
+    let filteredProduct = response?.find((p) => p.id == id);
     setProduct(filteredProduct);
   }, [id]);
 
