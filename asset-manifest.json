@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/RightDrive-Dev-Test/static/css/main.073c9b0a.css",
+    "main.js": "/RightDrive-Dev-Test/static/js/main.af5c4f09.js",
+    "static/js/787.27613e11.chunk.js": "/RightDrive-Dev-Test/static/js/787.27613e11.chunk.js",
+    "index.html": "/RightDrive-Dev-Test/index.html",
+    "main.073c9b0a.css.map": "/RightDrive-Dev-Test/static/css/main.073c9b0a.css.map",
+    "main.af5c4f09.js.map": "/RightDrive-Dev-Test/static/js/main.af5c4f09.js.map",
+    "787.27613e11.chunk.js.map": "/RightDrive-Dev-Test/static/js/787.27613e11.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.af5c4f09.js"
+  ]
+}
