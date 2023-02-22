@@ -1,18 +1,18 @@
 import "./App.css";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import {
-  ImageList,
-  ImageListItem,
-} from "@mui/material";
+import { useEffect, useState } from "react";
 
 function ProductDetail() {
+  const [product, setProduct] = useState([]);
   let { id } = useParams();
+
   const response = useSelector((state) => state.data.products);
-  let product = [];
-  if (response) {
-    product = response?.find((p) => p.id === id);
-  }
+
+  useEffect(() => {
+    let filteredProduct = response.find((p) => p.id == id);
+    setProduct(filteredProduct);
+  }, [id]);
 
   return (
     <div className="App">
@@ -26,24 +26,9 @@ function ProductDetail() {
           <p>Price: {product.price}</p>
           <p>Rating: {product.rating}</p>
           <p>Stock: {product.stock}</p>
-          <ImageList
-            children={null}
-            sx={{ width: "95vw" }}
-            variant="masonry"
-            cols={3}
-            gap={20}
-          >
-            {product.images?.map((item) => (
-              <ImageListItem key={item}>
-                <img
-                  src={`${item}?w=161&fit=crop&auto=format`}
-                  srcSet={`${item}?w=161&fit=crop&auto=format&dpr=2 2x`}
-                  alt={item}
-                  loading="lazy"
-                />
-              </ImageListItem>
-            ))}
-          </ImageList>
+          {product.images?.map((item) => (
+            <img src={item} alt={item.title} />
+          ))}
         </>
       )}
     </div>

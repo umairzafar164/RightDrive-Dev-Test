@@ -16,7 +16,7 @@ import { Link } from "react-router-dom";
 function App() {
   const dispatch = useDispatch();
   const response = useSelector((state) => state.data.products);
-  
+
   useEffect(() => {
     dispatch(fetchData());
   }, []);
@@ -31,7 +31,11 @@ function App() {
       >
         {response?.map((item, index) => (
           <Grid item xs={2} sm={4} md={3} key={index}>
-            <Card sx={{ maxWidth: 345, height:600 }} display= "flex" flexdirection= "column">
+            <Card
+              sx={{ maxWidth: 345, height: 600 }}
+              display="flex"
+              flexdirection="column"
+            >
               <CardMedia
                 sx={{ height: 390 }}
                 image={item.thumbnail}
